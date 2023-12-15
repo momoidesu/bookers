@@ -7,6 +7,7 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     book.save
     redirect_to book_path(book)
+    flash[:notice] = "Book was successfully created."
   end
 
   def index

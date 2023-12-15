@@ -1,8 +1,19 @@
 <h1>Editing Book</h1>
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
 
   <div class="field">
     <label for="book_title">Title</label>
     <p><%= f.text_field :title %></p>
   </div>
+  
+  <div class="field">
+    <label for="book_body">Body</label>
+    <p><%= f.text_field :body %></p>
+  </div>
+  
+  <%= link_to 'Show', book_path %>
+  <%= link_to 'Back', books_path %>
+  
+  <% end %>
 
 
